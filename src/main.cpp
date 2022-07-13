@@ -86,14 +86,14 @@ int main(int argc, char* argv[]) {
 			if (
 				(
 					(
-						(value < distancesFromCenter[0])
+						(value <= distancesFromCenter[0])
 					) or (
-						(value > distancesFromCenter[1]) and (value < distancesFromCenter[2])
+						(value >= distancesFromCenter[1]) and (value <= distancesFromCenter[2])
 					) or (
-						(value > distancesFromCenter[2]) and (abs((screenWidth / 2) - j) < segmentWidth)
+						(value >= distancesFromCenter[2]) and (abs((screenWidth / 2) - j) <= segmentWidth)
 					) or (
 						(
-							(value > distancesFromCenter[2])
+							(value >= distancesFromCenter[2])
 						) and (
 							abs(
 								(
@@ -101,18 +101,18 @@ int main(int argc, char* argv[]) {
 								) - (
 									abs((screenHeight / 2) - i) * 0.5
 								) 
-							) < (
+							) <= (
 								segmentWidth
 							)
 						) and (
-							i > screenHeight / 2
+							i >= screenHeight / 2
 						)
 					)
 				) and (
 					(
-						value < distancesFromCenter[3]
+						value <=distancesFromCenter[3]
 					) or (
-						(value < distancesFromCenter[4]) and (i < screenHeight / 2)
+						(value <= distancesFromCenter[4]) and (i <= screenHeight / 2)
 					)
 				)
 			){
