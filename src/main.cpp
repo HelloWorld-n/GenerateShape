@@ -90,7 +90,11 @@ int main(int argc, char* argv[]) {
 					) or (
 						(value >= distancesFromCenter[1]) and (value <= distancesFromCenter[2])
 					) or (
-						(value >= distancesFromCenter[2]) and (abs((screenWidth / 2) - j) <= segmentWidth)
+						(
+							value >= distancesFromCenter[2]
+						) and (
+							abs((screenWidth / 2) - j) <= segmentWidth
+						)
 					) or (
 						(
 							(value >= distancesFromCenter[2])
