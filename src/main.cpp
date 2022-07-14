@@ -7,7 +7,7 @@
 const int screenWidth = 800;
 const int screenHeight = 600;
 const int segmentSize = 1;
-const int distancesFromCenter[5] = {10, 30, 40, 80, 120};
+const int distancesFromCenter[5] = {15, 45, 60, 120, 180};
 const int segmentWidth = 5;
 
 void handleEvents(SDL_Window *window, bool mainWindow = false){
